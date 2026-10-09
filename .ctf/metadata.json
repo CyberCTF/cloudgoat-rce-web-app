@@ -1,0 +1,8 @@
+{
+  "title": "CloudGoat: RCE web app",
+  "description": "A CloudGoat scenario by Rhino Security Labs, deployed into your own AWS account: starting as the IAM user Lara, read a load balancer's logs in S3 to find a hidden page with remote code execution on the web application, then reach the protected RDS database. Alternatively, start as McDuck, find SSH keys in S3 and go straight to the EC2 server.",
+  "question": "Starting as the IAM user Lara (or McDuck), read the secret stored in the scenario's RDS database.",
+  "category": "MISC",
+  "difficulty": 2,
+  "evidence_kind": "SECRET"
+}
