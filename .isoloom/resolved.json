@@ -57,5 +57,17 @@
       }
     ]
   },
-  "message": null
+  "cloud": {
+    "provider": "aws",
+    "terraform": "terraform",
+    "outputs": [
+      "lara_access_key_id",
+      "lara_secret_key",
+      "mcduck_access_key_id",
+      "mcduck_secret_key"
+    ],
+    "inputs": [],
+    "hourly_usd": 0.07
+  },
+  "message": "You are the IAM user Lara (or, for the second route, McDuck):\n  aws configure --profile lara     # access key {{ cloud.outputs.lara_access_key_id }}\n                                   # secret key {{ cloud.outputs.lara_secret_key }}\n  aws configure --profile mcduck   # access key {{ cloud.outputs.mcduck_access_key_id }}\n                                   # secret key {{ cloud.outputs.mcduck_secret_key }}\nGoal: the secret in the scenario's RDS database. Cheat sheets:\napp/cloudgoat/scenarios/aws/rce_web_app/cheat_sheet_lara.md and cheat_sheet_mcduck.md\n"
 }
